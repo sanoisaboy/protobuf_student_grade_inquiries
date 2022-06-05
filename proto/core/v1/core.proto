@@ -1,0 +1,123 @@
+syntax ="proto3";
+package core.v1;
+import "google/protobuf/any.proto";
+
+import "google/api/annotations.proto";
+import "google/protobuf/field_mask.proto";
+import "validate/validate.proto";
+import "google/protobuf/struct.proto";
+//import "protoc-gen-swagger/options/annotations.proto";
+
+
+option go_package = "github.com/sanoisaboy/restful/pkg/proto/core/v1";
+
+
+
+
+
+service Studentservice{
+    rpc GetStudent(GetStudentRequest) returns (GetStudentResponse){
+        option (google.api.http) ={
+            get:"/v1/users/id"
+        };
+    }
+    rpc ListStudent(ListStudentRequest) returns (ListStudentResponse){
+        option (google.api.http) = {
+            get: "/v1/users"
+        };
+    }
+    rpc CreateStudent(CreateStudentRequest) returns (CreateStudentResponse){
+        option (google.api.http)  = {
+            post: "/v1/users"
+            body: "user"
+        };
+    }
+    rpc UpdateStudent(UpdateStudentResquest) returns (UpdateStudentResponse){
+        option (google.api.http) = {
+            patch: "/v1/users"
+            body: "user"
+        };
+    }
+    rpc DeleteStudent(DeleteStudentResquest) returns (DeleteStudentResponse){
+        option (google.api.http) = {
+            delete: "/v1/users"
+        };
+    }
+
+}
+
+
+message ListStudentRequest{
+}
+message ListStudentResponse{
+    repeated User user =1;
+    string name = 2;
+    int32 id = 3;
+    int32 point = 4;
+}
+
+message GetStudentRequest{
+    string name = 1;
+    int32 id = 2;
+    int32 point = 3;
+}
+
+message GetStudentResponse{
+    string name = 1;
+    int32 id = 2;
+    int32 point = 3;
+    string success=4;
+}
+
+message CreateStudentRequest{
+    User user = 1;
+    string name = 2;
+    int32 id = 3;
+    int32 point = 4;
+}
+
+message CreateStudentResponse{
+    string success = 1;
+    string name = 2;
+    int32 id = 3;
+    int32 point = 4;
+}
+
+message UpdateStudentResquest{
+   User user = 1;
+   int32 id =2;
+   int32 point=3;
+   //google.protobuf.FieldMask update_mask = 2;
+}
+
+message UpdateStudentResponse{
+    string updatesuccess = 1;
+    string name = 2;
+    int32 id = 3;
+    int32 point = 4;
+    User user=5;
+}
+
+message DeleteStudentResquest{
+    string name = 1;
+    int32 id = 2;
+    int32 point = 3;
+}
+
+message DeleteStudentResponse{
+    string Deletesuccess = 1;
+}
+
+message User{
+    string Student_name =1;
+    int32 ID = 2;
+    int32 POINT =3;
+}
+
+message messages{
+    string text = 1;
+}
+message ids{
+    string text =1;
+}
+
