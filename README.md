@@ -25,4 +25,4 @@ In this module, we need to build a client interface, in other words, we need to 
 * Implement protobuf validator
 
 ## How to use
-    $go run cmd/restful/main.go -connect_string "<connect_string>"
+    $go run cmd/restful/main.go -connect_string "<database_connect_string>"
