@@ -25,5 +25,4 @@ In this module, we need to build a client interface, in other words, we need to 
 * Implement protobuf validator
 
 ## How to use
-
- go run
+    go run
