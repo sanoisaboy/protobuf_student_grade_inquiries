@@ -16,7 +16,6 @@ In this module, we need to use Go to transfer SQL command into Go code. You may 
 
 ### Objectives
 * Implement ```crdbRepository struct``` and ```Repository interface``` 
-* Implement ```package entity``` for repository to use
 
 ## Module 3: Protobuf & gRPC & HTTP
 In this module, we need to build a client interface, in other words, we need to provide HTTP endpoints and gRPC contracts. We can use protobuf and buf.build to manage and generate code. There are many tools you can use with protobuf such as grpc-gateway or envoy-validator.
