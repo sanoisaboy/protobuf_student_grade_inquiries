@@ -9,7 +9,7 @@ In this module, we need to familiar with Distributed SQL (a kind of SQL database
 
 ### Objectives
 * Admin CockroachDB (eg: setup database and user-schema...)
-* Design a application schema call student_grade which include student_name ,id ,point (eg: tables, indexes...)
+* Design application schema (eg: tables, indexes...)
 
 ## Module 2: Repository & Entity & Interactor
 In this module, we need to use Go to transfer SQL command into Go code. You may use some database driver or ORM libraries like GORM or pgxpool.
@@ -25,4 +25,5 @@ In this module, we need to build a client interface, in other words, we need to 
 * Implement protobuf validator
 
 ## How to use
-`
+
+    go run
