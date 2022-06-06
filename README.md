@@ -25,8 +25,5 @@ In this module, we need to build a client interface, in other words, we need to 
 * Implement gRPC contract
 * Implement protobuf validator
 
-## Module 4: Layout
-In this module, we need to organize our code that we wrote in previous modules.
+## How to use
 
-## Module 5: Deploy
-In this module, we need to packaging our application into container and deploy on kubernetes.
