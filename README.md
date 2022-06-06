@@ -25,4 +25,6 @@ In this module, we need to build a client interface, in other words, we need to 
 * Implement protobuf validator
 
 ## How to use
+first run the code
     $go run cmd/restful/main.go -connect_string "<database_connect_string>"
+and connect to localhost:30001
