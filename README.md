@@ -29,4 +29,4 @@ first run the code.
 
     $go run cmd/restful/main.go -connect_string "<database_connect_string>"
 
-and connect to localhost:3001.
+and use browser connect to localhost:3001.
